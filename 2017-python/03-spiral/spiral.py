@@ -52,7 +52,7 @@ def distance(n):
 
 
 def spiral_sums(maxitems=-1):
-    lut = collections.defaultdict(lambda: 0)
+    lut = collections.defaultdict(int)
     kernelsize = 1
     kernel = list(
         filter(

@@ -28,7 +28,7 @@ def main(inargs=None):
 
     args = parser.parse_args(inargs)
 
-    stats = collections.defaultdict(lambda: 0)
+    stats = collections.defaultdict(int)
 
     with args.passwords as f:
         for passphrase in f.readlines():

@@ -57,7 +57,7 @@ def redistribute(initial, limit=1):
         - cycle count (since start, or since last encounter with the same bank)
         - list of current banks
     """
-    seen = collections.defaultdict(lambda: 0)
+    seen = collections.defaultdict(int)
     bank = initial
     interval = interval_cycles = 0
     for total_cycles in itertools.count(0):
