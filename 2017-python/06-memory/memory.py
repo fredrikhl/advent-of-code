@@ -78,6 +78,13 @@ def redistribute(initial, limit=1):
         bank = cycle(bank)
 
 
+def count(iterable):
+    """ Get the number of cycles in a redistribute generator. """
+    for _, i, _ in iterable:
+        pass
+    return i
+
+
 def main(inargs=None):
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -108,14 +115,10 @@ def main(inargs=None):
     print('{0} banks read'.format(len(initial)))
 
     if args.part_1:
-        for total, interval, bank in redistribute(initial, 1):
-            pass
-        print("Part 1:", interval)
+        print("Part 1:", count(redistribute(initial, 1)))
 
     if args.part_2:
-        for total, interval, bank in redistribute(initial, 2):
-            pass
-        print("Part 2:", interval)
+        print("Part 2:", count(redistribute(initial, 2)))
 
 
 if __name__ == '__main__':
