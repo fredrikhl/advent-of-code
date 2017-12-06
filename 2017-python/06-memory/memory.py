@@ -87,11 +87,6 @@ def main(inargs=None):
         type=argparse.FileType('Ur'),
         default=io.StringIO(EXAMPLE),
         help="file with banks to read, or '-' to read from STDIN")
-    parser.add_argument(
-        '-i', '--interval',
-        default=1,
-        type=int,
-        help="which interval to examine")
     skip = parser.add_mutually_exclusive_group()
     skip.add_argument(
         '--skip-part-1',
