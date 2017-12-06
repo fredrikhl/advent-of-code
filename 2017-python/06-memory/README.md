@@ -47,7 +47,7 @@ before?
 
 Your puzzle answer was `6681`.
 
-## Part Two
+## Part 2
 
 Out of curiosity, the debugger would also like to know the size of the loop:
 starting from a state that has already been seen, how many block redistribution
