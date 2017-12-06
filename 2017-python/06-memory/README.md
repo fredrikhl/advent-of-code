@@ -1,4 +1,4 @@
-# Day 6: Memory Reallocation
+# [Day 6]: Memory Reallocation
 
 A debugger program here is having an issue: it is trying to repair a memory
 reallocation routine, but it keeps getting stuck in an infinite loop.
@@ -60,3 +60,5 @@ answer in that example would be 4.
 in your puzzle input?
 
 Your puzzle answer was `2392`.
+
+  [Day 6]: http://adventofcode.com/2017/day/6

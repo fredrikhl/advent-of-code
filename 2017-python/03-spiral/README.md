@@ -1,4 +1,4 @@
-# Day 3: Spiral Memory
+# [Day 3]: Spiral Memory
 
 You come across an experimental new kind of memory stored on an infinite
 two-dimensional grid.
@@ -7,7 +7,7 @@ two-dimensional grid.
 ## Part 1
 
 Each square on the grid is allocated in a spiral pattern starting at a location
-marked *1* and then counting up while spiraling outward. For example, the first
+marked **1** and then counting up while spiraling outward. For example, the first
 few squares are allocated like this:
 
     17  16  15  14  13
@@ -29,12 +29,10 @@ For example:
 - Data from square `23` is carried only 2 steps: up twice.
 - Data from square `1024` must be carried 31 steps.
 
-*How many steps* are required to carry the data from the square identified in
+**How many steps** are required to carry the data from the square identified in
 your puzzle input all the way to the access port?
 
 Your puzzle answer was `371`.
-
-  [Manhattan Distance]: https://en.wikipedia.org/wiki/Taxicab_geometry
 
 
 ## Part 2
@@ -64,6 +62,9 @@ squares would receive the following values:
     351   11   23   25   26
     362  747  806--->   ...
 
-What is the *first value written* that is *larger* than your puzzle input?
+What is the **first value written** that is **larger** than your puzzle input?
 
 Your puzzle answer was `369601`.
+
+  [Manhattan Distance]: https://en.wikipedia.org/wiki/Taxicab_geometry
+  [Day 3]: http://adventofcode.com/2017/day/3
