@@ -48,7 +48,7 @@ class Forest(object):
 
     def build(self):
         trees = []
-        for node in self.nodes.itervalues():
+        for node in self.nodes.values():
             parent = self.parents.get(str(node), None)
             if parent:
                 node.parent = parent
