@@ -1,6 +1,6 @@
 # Advent of Code 2017
 
-Solutions to [Advent of Code], in Python.
+Over-engineered solutions to [Advent of Code], in Python.
 
 These solutions *will* be sub-optimal in performance, but (hopefully) makes up
 for that in test coverage, readability and [Zen][PEP-20].
