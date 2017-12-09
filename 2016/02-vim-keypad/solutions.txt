@@ -1,0 +1,4 @@
+example 1: 1985
+example 2: 5DB3
+input 1:   97289
+input 2:   9A7DC
