@@ -1,6 +1,5 @@
 <?php
 /**
- *
  *  Advent of Code 2016
  *  Day 3: Squares With Three Sides
  *
@@ -33,8 +32,6 @@ function getarg($i, $default = null) {
  */
 function parse_file($filename) {
     $content = file_get_contents($filename);
-
-
 
     if ($content === false) {
         throw new Exception("Unable to read file");
@@ -92,10 +89,10 @@ function main() {
     $content = parse_file(getarg(1, 'php://stdin'));
 
     $pt1 = count_valid($content);
-    echo "Part 1, {$pt1}\n";
+    echo "Part 1: {$pt1}\n";
 
     $pt2 = count_valid(flip($content));
-    echo "Part 2, {$pt2}\n";
+    echo "Part 2: {$pt2}\n";
 }
 
 main();
