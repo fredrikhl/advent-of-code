@@ -292,10 +292,10 @@ travel()
         done
         debug "steps: $steps"
     done
+    info "steps: ${steps}"
+    info "final position: $(get-pos "${current}")"
 
-    echo "actual: ${steps} steps"
-    echo "position: $(get-pos "${current}")"
-    echo "shortest: $(distance "$current") steps"
+    echo "Shortest: $(distance "$current") steps"
 }
 
 
