@@ -28,12 +28,6 @@ class Range(object):
         """ Check if all of *self* starts after *other*. """
         return self.start > other.stop
 
-    def full_overlap_with(self, other):
-        return self in other or other in self
-
-    def partial_overlap_with(self, other):
-        return not (self < other or self > other)
-
 
 RE_LINE = re.compile(r"(\d+)-(\d+),(\d+)-(\d+)")
 
@@ -55,11 +49,19 @@ def read_values(fd):
 
 
 def solve_pt1(range_pairs):
-    return sum(a.full_overlap_with(b) for a, b in range_pairs)
+    """ Number of range pairs that overlaps completely. """
+    # Range pairs a and b overlap if:
+    # - all numbers in a are also in b
+    # - or all numbers in b are also in a
+    return sum(a in b or b in a for a, b in range_pairs)
 
 
 def solve_pt2(range_pairs):
-    return sum(a.partial_overlap_with(b) for a, b in range_pairs)
+    """N number of range pairs that overlaps partially. """
+    # Range pairs a and b *don't* overlap if:
+    # - all numbers in a are smaller than any number in b
+    # - or all numbers in b are smaller than any number in a
+    return sum(not (a < b or b < a) for a, b in range_pairs)
 
 
 default_input_file = os.path.join(os.path.dirname(__file__), 'input.txt')
