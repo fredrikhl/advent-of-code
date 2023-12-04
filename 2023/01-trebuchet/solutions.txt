@@ -1,0 +1,11 @@
+Solutions for example-1.txt
+Part 1: 142
+Part 2: 142
+
+Solutions for example-2.txt
+Part 1: 209
+Part 2: 281
+
+Solutions for input.txt
+Part 1: 53974
+Part 2: 52840
