@@ -1,0 +1,11 @@
+Solutions for example-without-unknowns.txt
+Part 1: 6
+Part 2: 6
+
+Solutions for example-with-unknowns.txt
+Part 1: 21
+Part 2: 525152
+
+Solutions for input.txt
+Part 1: 7084
+Part 2: 8414003326821
