@@ -1,0 +1,15 @@
+Solutions for example-a.txt
+Part 1: 2
+Part 2: 2
+
+Solutions for example-b.txt
+Part 1: 6
+Part 2: 6
+
+Solutions for example-c.txt
+Part 1: -1
+Part 2: 6
+
+Solutions for input.txt
+Part 1: 18827
+Part 2: 20220305520997
