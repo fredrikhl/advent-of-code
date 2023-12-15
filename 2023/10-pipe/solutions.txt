@@ -1,0 +1,23 @@
+Solutions for example-a.txt
+Part 1: 4
+Part 2: 1
+
+Solutions for example-b.txt
+Part 1: 8
+Part 2: 1
+
+Solutions for example-c.txt
+Part 1: 23
+Part 2: 4
+
+Solutions for example-d.txt
+Part 1: 70
+Part 2: 8
+
+Solutions for example-e.txt
+Part 1: 80
+Part 2: 10
+
+Solutions for input.txt
+Part 1: 6860
+Part 2: 343
