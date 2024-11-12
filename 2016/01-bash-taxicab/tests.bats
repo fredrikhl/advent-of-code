@@ -258,26 +258,24 @@ source "${BATS_TEST_DIRNAME}/shortest.bash"
     run travel <(echo "R2,L3")
     echo "${lines[*]}"
     [ "$status" -eq 0 ]
-    [ "${#lines[@]}" -eq 3 ]
-    [ "${lines[1]}" = "position: 2,3" ]
-    [ "${lines[2]}" = "shortest: 5 steps" ]
+    [ "${#lines[@]}" -eq 1 ]
+    [ "${lines[0]}" = "Shortest: 5 steps" ]
 }
 
 @test "travel R2,R2,R2" {
     run travel <(echo "R2,R2,R2")
     echo "${lines[*]}"
     [ "$status" -eq 0 ]
-    [ "${#lines[@]}" -eq 3 ]
-    [ "${lines[1]}" = "position: 0,-2" ]
-    [ "${lines[2]}" = "shortest: 2 steps" ]
+    [ "${#lines[@]}" -eq 1 ]
+    [ "${lines[0]}" = "Shortest: 2 steps" ]
 }
 
 @test "travel R5,L5,R5,R3" {
     run travel <(echo "R5,L5,R5,R3")
     echo "${lines[*]}"
     [ "$status" -eq 0 ]
-    [ "${#lines[@]}" -eq 3 ]
-    [ "${lines[2]}" = "shortest: 12 steps" ]
+    [ "${#lines[@]}" -eq 1 ]
+    [ "${lines[0]}" = "Shortest: 12 steps" ]
 }
 
 
@@ -285,6 +283,6 @@ source "${BATS_TEST_DIRNAME}/shortest.bash"
     run travel <(echo "R8, R4, R4, R8") 2
     echo "${lines[*]}"
     [ "$status" -eq 0 ]
-    [ "${#lines[@]}" -eq 3 ]
-    [ "${lines[2]}" = "shortest: 4 steps" ]
+    [ "${#lines[@]}" -eq 1 ]
+    [ "${lines[0]}" = "Shortest: 4 steps" ]
 }
