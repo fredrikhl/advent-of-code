@@ -25,24 +25,23 @@ def read_items(f):
                              % (lineno, line, e))
 
 
-class Solver(object):
-    """ a set of *operators* to apply to *operands* to get *answer*. """
+def get_solver(*operators):
+    """ get solver for a set of *operators*. """
 
-    def __init__(self, *operators):
-        self.operators = operators
-
-    def __call__(self, operands, answer):
+    def is_solvable(operands, answer):
         """ check if a solution exists for the *operands* and *answer* """
         if len(operands) > 1:
             return any(
-                self.__call__((fn(*operands[:2]),) + operands[2:], answer)
-                for fn in self.operators
+                is_solvable((fn(*operands[:2]),) + operands[2:], answer)
+                for fn in operators
             )
         return operands[0] == answer
 
+    return is_solvable
+
 
 def solve_pt1(data):
-    is_solvable = Solver(operator.add, operator.mul)
+    is_solvable = get_solver(operator.add, operator.mul)
     return sum(
         answer
         for answer, operands in data
@@ -56,7 +55,7 @@ def concatenate(a, b):
 
 
 def solve_pt2(data):
-    is_solvable = Solver(operator.add, operator.mul, concatenate)
+    is_solvable = get_solver(operator.add, operator.mul, concatenate)
     return sum(
         answer
         for answer, operands in data
