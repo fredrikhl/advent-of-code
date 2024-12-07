@@ -4,7 +4,6 @@ Advent of Code 2024
 `Day 7 <https://adventofcode.com/2024/day/7>`_:
 Bridge Repair
 """
-import itertools
 import operator
 import os
 import sys
@@ -26,14 +25,6 @@ def read_items(f):
                              % (lineno, line, e))
 
 
-def apply_operators(operators, operands):
-    """ apply a sequence of N-1 operators to a sequence of N numbers. """
-    total = operands[0]
-    for fn, value in zip(operators, operands[1:]):
-        total = fn(total, value)
-    return total
-
-
 class Solver(object):
     """ a set of *operators* to apply to *operands* to get *answer*. """
 
@@ -42,9 +33,12 @@ class Solver(object):
 
     def __call__(self, operands, answer):
         """ check if a solution exists for the *operands* and *answer* """
-        n = len(operands) - 1
-        return any(apply_operators(combo, operands) == answer
-                   for combo in itertools.product(self.operators, repeat=n))
+        if len(operands) > 1:
+            return any(
+                self.__call__((fn(*operands[:2]),) + operands[2:], answer)
+                for fn in self.operators
+            )
+        return operands[0] == answer
 
 
 def solve_pt1(data):
